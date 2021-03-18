@@ -39,10 +39,10 @@ print(list1[N-1])
 
 # # 다른 풀이
 
-# N      = int(input())  
-# target = 666
-# while N:
-#     if '666' in str(target):
-#         N -= 1
-#     target += 1 
-# print(target-1)
+N      = int(input())  
+target = 666
+while N:
+    if '666' in str(target):
+        N -= 1
+    target += 1 
+print(target-1)

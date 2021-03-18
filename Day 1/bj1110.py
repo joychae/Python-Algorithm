@@ -16,6 +16,7 @@ while True:
         firstNumber = i[1] # [6]
         firstNumber = str(firstNumber) # "6"
 
+    result = ???
     result = str(i)
     if len(result) == 1 :
         result = i[0]

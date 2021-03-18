@@ -13,7 +13,7 @@ for _ in range(n):
     dp = [node_number[0]]
 
 # print(dp)
-# print(node_number)
+print(node_number)
 
 for i in range(1, n):
     # print(i)

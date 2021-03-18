@@ -1,3 +1,5 @@
+# 색종이 만들기 (분할정복 연습)
+# 틀린 문제
 
 import sys
 
@@ -12,8 +14,6 @@ def divide(x, y, n):
     check_color = True
 
     for i in range(x,x+n):
-        if not check_color: # 이거 왜 있을까?
-            break
         for j in range(y,y+n):
             if paper_color != paper_list[i][j]:
                 check_color = False
@@ -21,7 +21,7 @@ def divide(x, y, n):
                 divide(x, y+(n//2), n//2)
                 divide(x+(n//2), y, n//2)
                 divide(x+(n//2), y+(n//2), n//2)
-                break
+                return
     
     if check_color:
         if paper_color:
@@ -29,7 +29,7 @@ def divide(x, y, n):
         elif not paper_color:
             white_count += 1
 
-divide(0, 0, n)
+divide(0, 0, N)
 print(white_count)
 print(blue_count)
 
@@ -72,36 +72,36 @@ print(blue_count)
 # print(paper_list_1)
 # print(count_white, count_blue)
 
-import sys
-n=int(sys.stdin.readline())
+# import sys
+# n=int(sys.stdin.readline())
  
-color_paper=[list(map(int,sys.stdin.readline().split())) for _ in range(n)]#x행 y열
+# color_paper=[list(map(int,sys.stdin.readline().split())) for _ in range(n)]#x행 y열
  
-white=0#0이면 흰생
-blue=0#1이면 파란색
+# white=0#0이면 흰생
+# blue=0#1이면 파란색
  
-def cut(x,y,n):
-    global blue,white
-    check=color_paper[x][y]
-    for i in range(x,x+n):
-        for j in range(y,y+n):
-            if check!=color_paper[i][j]:#하나라도 같은색이 아니라면
-                #4등분
-                cut(x,y,n//2)#1사분면
-                cut(x,y+n//2,n//2)#2사분면
-                cut(x+n//2,y,n//2)#3사분면
-                cut(x+n//2,y+n//2,n//2)#4사분면
-                return
+# def cut(x,y,n):
+#     global blue,white
+#     check=color_paper[x][y]
+#     for i in range(x,x+n):
+#         for j in range(y,y+n):
+#             if check!=color_paper[i][j]:#하나라도 같은색이 아니라면
+#                 #4등분
+#                 cut(x,y,n//2)#1사분면
+#                 cut(x,y+n//2,n//2)#2사분면
+#                 cut(x+n//2,y,n//2)#3사분면
+#                 cut(x+n//2,y+n//2,n//2)#4사분면
+#                 return
  
-    if check==0:#모두 흰색일때
-        white+=1
-        return
-    else:   #모두 파란색일때
-        blue+=1
-        return
+#     if check==0:#모두 흰색일때
+#         white+=1
+#         return
+#     else:   #모두 파란색일때
+#         blue+=1
+#         return
  
  
-cut(0,0,n)
-print(white)
-print(blue)
+# cut(0,0,n)
+# print(white)
+# print(blue)
 
