@@ -28,7 +28,7 @@ ans = []
 for i in range(n):
     for j in range(n):
         if matrix[i][j]==1:
-            일단 1로 뭔가의 그룹이다.
+            #일단 1로 뭔가의 그룹이다.
             ans.append(dfs(matrix, 1, i, j))
 
 print(len(ans))
