@@ -14,7 +14,7 @@ max_height = max(tree_height)
 ans = 0
 
 while min_height <= max_height:
-    mid_height = (min_height + max_height) // 2
+    mid_height = (min_height + max_height) // 2 #while문 돌면서 초기화 되고, 재설정 되어야 하는 값은 while문 안에 잘 넣어주자
     tree_get = 0
 
     for tree in tree_height:
