@@ -33,27 +33,6 @@ for i in range(1, N):
     dp.append(cost_per_color)
     
 print(min(dp[N - 1]))
-
-
-
-
-# select ={
-#     0: 0
-# }
-
-# def dp(n):
-#     global cost
-#     global select
-
-#     if n in select.keys():
-#         return select[n]
-    
-#     del cost[n-1][select[n-1]]
-#     nth = min(cost[n-1])
-#     select[n] = 
-#     return nth
-
-# print(dp(house))
     
 
 

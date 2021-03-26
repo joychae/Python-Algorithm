@@ -56,23 +56,4 @@ print(*dfs(adj_graph, start_node))
 print(*bfs(adj_graph, start_node))
 
 
-# # 풀이 중간 저장 (틀린 코드)
-
-# # DFS 함수식 구현
-# def dfs(adj_graph, start_node):
-#     stack = [start_node]
-#     visited = []
-
-#     while stack:
-#         visit_node = stack.pop()
-#         adj_graph[visit_node].sort(reverse=True)
-#         visited.append(visit_node)
-
-#         for adj_node in adj_graph[visit_node]:
-#             if adj_node not in visited:
-#                 stack.append(adj_node)
-    
-#     return visited[:node]
-
-
 
