@@ -1,4 +1,5 @@
 # 일곱 난쟁이 (브루트포스 연습)
+# 1회차 맞은문제 72ms
 
 import sys
 from itertools import combinations
@@ -9,15 +10,14 @@ idx_combinations = list(combinations(idx, 2))
 
 for i in range(len(idx_combinations)):
     temp_heights = heights.copy()
-    print(temp_heights)
     x, y = idx_combinations[i]
-    print(x)
-    print(y)
-    del temp_heights[x]
-    del temp_heights[y]
+    temp_heights[x] = 0
+    temp_heights[y] = 0
     sum_heights = sum(temp_heights)
 
     if sum_heights == 100:
-        print(temp_heights)
         break
 
+temp_heights.sort()
+for i in temp_heights[2:]:
+    print(i)
